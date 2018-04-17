@@ -30,6 +30,7 @@ const (
 	SlopePositive = slopeType("positive")
 	SlopeNegative = slopeType("negative")
 	SlopeBoth     = slopeType("both")
+	SlopeDerive   = slopeType("derive")
 )
 
 func (s slopeType) value() uint32 {
@@ -42,6 +43,8 @@ func (s slopeType) value() uint32 {
 		return 2
 	case SlopeBoth:
 		return 3
+	case SlopeDerive:
+		return 5
 	}
 	return 4
 }
